@@ -1,10 +1,5 @@
 import aQute.bnd.gradle.Bundle
 
-group 'info.picocli'
-description 'Java command line parser with both an annotations API and a programmatic API. Usage help with ANSI styles and colors. Autocomplete. Nested subcommands. Easily included as source to avoid adding a dependency.'
-version "$projectVersion"
-ext.moduleName = 'info.picocli'
-
 buildscript {
     apply from: 'dependencies.gradle'
 
@@ -21,6 +16,16 @@ buildscript {
         classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.30.0"
     }
 }
+
+plugins {
+  id 'org.checkerframework' version '0.6.35'
+}
+
+
+group 'info.picocli'
+description 'Java command line parser with both an annotations API and a programmatic API. Usage help with ANSI styles and colors. Autocomplete. Nested subcommands. Easily included as source to avoid adding a dependency.'
+version "$projectVersion"
+ext.moduleName = 'info.picocli'
 
 apply plugin: 'io.codearte.nexus-staging'
 
@@ -61,6 +66,7 @@ allprojects {
     apply plugin: 'java'
     apply plugin: 'java-library' // to avoid https://github.com/gradle/gradle/issues/1118
     apply plugin: "org.beryx.jar" // for compiling module-info on Java 8
+    apply plugin: 'org.checkerframework'
 
     if (!JavaVersion.current().isJava9Compatible()) {
         sourceCompatibility = 1.5
@@ -77,6 +83,15 @@ allprojects {
 
     compileJava.options.encoding = "UTF-8"
     compileTestJava.options.encoding = "UTF-8"
+
+    checkerFramework {
+      checkers = [
+        'org.checkerframework.checker.optional.OptionalChecker',
+      ]
+      extraJavacArgs = [
+        '-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno',
+      ]
+    }
 
     repositories {
         maven { url 'https://repo.spring.io/libs-snapshot' }
