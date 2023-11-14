@@ -110,7 +110,6 @@ class CommandGroupRenderer implements CommandLine.IHelpSectionRenderer {
         return textTable;
     }
 
-    @SuppressWarnings("method.invocation") // application-invariant : subcommands is guaranteed populated in render().
     private int maxLength(Map<String, CommandLine> subcommands, int max) {
         int result = subcommands.values().stream().map(cmd -> cmd.getCommandSpec().names().toString().length() - 2).max(Integer::compareTo).get();
         return Math.min(max, result);

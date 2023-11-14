@@ -89,7 +89,6 @@ allprojects {
         'org.checkerframework.checker.optional.OptionalChecker',
       ]
       extraJavacArgs = [
-        '-AskipDefs=.*Test',
         '-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno',
       ]
     }
