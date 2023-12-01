@@ -1,0 +1,293 @@
+ ./gradlew spotbugsBundle
+
+> Configure project :
+skipping jacoco test for Java version 11
+
+> Configure project :picocli-spring-boot-starter
+picocli-spring-boot-starter/build.gradle: JavaVersion=11
+picocli-spring-boot-starter/build.gradle: JavaVersion.majorVersion=11
+picocli-spring-boot-starter/build.gradle: useJava17=false
+picocli-spring-boot-starter/build.gradle: api                 org.springframework.boot:spring-boot-starter:2.7.12
+picocli-spring-boot-starter/build.gradle: annotationProcessor org.springframework.boot:spring-boot-configuration-processor:2.7.12
+picocli-spring-boot-starter/build.gradle: testImplementation  org.springframework.boot:spring-boot-starter-test:2.7.12
+
+BUILD SUCCESSFUL in 442ms
+
+./gradlew spotbugsMain
+
+> Configure project :
+skipping jacoco test for Java version 11
+
+> Configure project :picocli-spring-boot-starter
+picocli-spring-boot-starter/build.gradle: JavaVersion=11
+picocli-spring-boot-starter/build.gradle: JavaVersion.majorVersion=11
+picocli-spring-boot-starter/build.gradle: useJava17=false
+picocli-spring-boot-starter/build.gradle: api                 org.springframework.boot:spring-boot-starter:2.7.12
+picocli-spring-boot-starter/build.gradle: annotationProcessor org.springframework.boot:spring-boot-configuration-processor:2.7.12
+picocli-spring-boot-starter/build.gradle: testImplementation  org.springframework.boot:spring-boot-starter-test:2.7.12
+
+> Task :picocli-codegen:compileJava
+/experiments/picocli/picocli-codegen/src/main/java/picocli/codegen/aot/graalvm/DynamicProxyConfigGenerator.java:167: warning: [unchecked] Possible heap pollution from parameterized vararg type List<String>
+        private static StringBuilder json(List<String>... stringLists) {
+                                                          ^
+1 warning
+
+> Task :spotbugsMain
+M B Se: picocli.CommandLine$Help$SortByOrder implements Comparator but not Serializable  At CommandLine.java:[lines 17091-17093]
+H B DE: new picocli.CommandLine$Model$MethodParam(Method, int) might ignore java.lang.Exception  At CommandLine.java:[line 11101]
+M V EI: picocli.CommandLine$Model$MethodParam.getDeclaringExecutable() may expose internal representation by returning CommandLine$Model$MethodParam.method  At CommandLine.java:[line 11107]
+M V EI2: new picocli.CommandLine$Model$MethodParam(Method, int) may expose internal representation by storing an externally mutable object into CommandLine$Model$MethodParam.method  At CommandLine.java:[line 11093]
+M D REC: Exception is caught when Exception is not thrown in new picocli.CommandLine$Model$MethodParam(Method, int)  At CommandLine.java:[line 11101]
+M B Se: picocli.CommandLine$Help$ShortestFirst implements Comparator but not Serializable  At CommandLine.java:[lines 17046-17058]
+M V EI: picocli.CommandLine$ParameterException.getArgSpec() may expose internal representation by returning CommandLine$ParameterException.argSpec  At CommandLine.java:[line 18633]
+M V EI2: new picocli.CommandLine$ParameterException(CommandLine, String, CommandLine$Model$ArgSpec, String) may expose internal representation by storing an externally mutable object into CommandLine$ParameterException.argSpec  At CommandLine.java:[line 18618]
+M V EI: picocli.CommandLine$ParameterException.getCommandLine() may expose internal representation by returning CommandLine$ParameterException.commandLine  At CommandLine.java:[line 18627]
+M V EI2: new picocli.CommandLine$ParameterException(CommandLine, String, Throwable, CommandLine$Model$ArgSpec, String) may expose internal representation by storing an externally mutable object into CommandLine$ParameterException.argSpec  At CommandLine.java:[line 18604]
+M B CT: Exception thrown in class picocli.CommandLine$ParameterException at new picocli.CommandLine$ParameterException(CommandLine, String, Throwable, CommandLine$Model$ArgSpec, String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.  At CommandLine.java:[line 18603]
+M B CT: Exception thrown in class picocli.CommandLine$ParameterException at new picocli.CommandLine$ParameterException(CommandLine, String, CommandLine$Model$ArgSpec, String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.  At CommandLine.java:[line 18617]
+M B CN: picocli.CommandLine$Help$Ansi$Text.clone() does not call super.clone()  At CommandLine.java:[line 18208]
+M B CT: Exception thrown in class picocli.CommandLine$Model$OptionSpec at new picocli.CommandLine$Model$OptionSpec(CommandLine$Model$OptionSpec$Builder) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.  At CommandLine.java:[line 9999]
+M V EI: picocli.CommandLine$ExecutionException.getCommandLine() may expose internal representation by returning CommandLine$ExecutionException.commandLine  At CommandLine.java:[line 18557]
+M V EI: picocli.CommandLine$Help$ColorScheme$Builder.stackTraceStyles() may expose internal representation by returning CommandLine$Help$ColorScheme$Builder.stackTraceStyles  At CommandLine.java:[line 17741]
+M V EI: picocli.CommandLine$Help$ColorScheme$Builder.commandStyles() may expose internal representation by returning CommandLine$Help$ColorScheme$Builder.commandStyles  At CommandLine.java:[line 17729]
+M V EI: picocli.CommandLine$Help$ColorScheme$Builder.errorStyles() may expose internal representation by returning CommandLine$Help$ColorScheme$Builder.errorStyles  At CommandLine.java:[line 17738]
+M V EI: picocli.CommandLine$Help$ColorScheme$Builder.optionStyles() may expose internal representation by returning CommandLine$Help$ColorScheme$Builder.optionStyles  At CommandLine.java:[line 17731]
+M V EI: picocli.CommandLine$Help$ColorScheme$Builder.parameterStyles() may expose internal representation by returning CommandLine$Help$ColorScheme$Builder.parameterStyles  At CommandLine.java:[line 17733]
+M V EI2: picocli.CommandLine$Help$ColorScheme$Builder.customMarkupMap(Map) may expose internal representation by storing an externally mutable object into CommandLine$Help$ColorScheme$Builder.markupMap  At CommandLine.java:[line 17749]
+M V EI: picocli.CommandLine$Help$ColorScheme$Builder.customMarkupMap() may expose internal representation by returning CommandLine$Help$ColorScheme$Builder.markupMap  At CommandLine.java:[line 17745]
+M V EI: picocli.CommandLine$Help$ColorScheme$Builder.optionParamStyles() may expose internal representation by returning CommandLine$Help$ColorScheme$Builder.optionParamStyles  At CommandLine.java:[line 17735]
+M B CT: Exception thrown in class picocli.CommandLine$Range at new picocli.CommandLine$Range(int, int, boolean, boolean, String) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.  At CommandLine.java:[line 5713]
+
+> Task :jar
+warning: Classpath is empty. Private-Package, -privatepackage, and Export-Package can only expand from the classpath when there is one
+
+> Task :picocli-codegen:spotbugsMain
+H I Dm: Found reliance on default encoding in picocli.codegen.aot.graalvm.OutputFileMixin.writeToFile(String): new java.io.FileWriter(File)  At OutputFileMixin.java:[line 33]
+M B Se: picocli.codegen.docgen.manpage.ManPageGenerator$ShortestFirst implements Comparator but not Serializable  At ManPageGenerator.java:[lines 758-770]
+M B Se: picocli.codegen.docgen.manpage.ManPageGenerator$SortByOrder implements Comparator but not Serializable  At ManPageGenerator.java:[lines 752-754]
+M P SBSC: picocli.codegen.aot.graalvm.DynamicProxyConfigGenerator$Visitor.visitCommandSpec(CommandLine$Model$CommandSpec) concatenates strings using + in a loop  At DynamicProxyConfigGenerator.java:[line 139]
+M P SBSC: picocli.codegen.aot.graalvm.DynamicProxyConfigGenerator$Visitor.json(List[]) concatenates strings using + in a loop  At DynamicProxyConfigGenerator.java:[line 180]
+M P WMI: picocli.codegen.annotation.processing.ParameterConsumerMetaData.extract(Element) makes inefficient use of keySet iterator instead of entrySet iterator  At ParameterConsumerMetaData.java:[line 46]
+H I Dm: Found reliance on default encoding in picocli.codegen.docgen.manpage.ManPageGenerator.generateCustomizableTemplate(ManPageGenerator$Config, CommandLine$Model$CommandSpec): new java.io.FileWriter(File)  At ManPageGenerator.java:[line 392]
+M P WMI: picocli.codegen.annotation.processing.CompletionCandidatesMetaData.extract(Element) makes inefficient use of keySet iterator instead of entrySet iterator  At CompletionCandidatesMetaData.java:[line 43]
+M P SBSC: picocli.codegen.aot.graalvm.ReflectionConfigGenerator$ReflectedClass.toString() concatenates strings using + in a loop  At ReflectionConfigGenerator.java:[line 582]
+M B Se: picocli.codegen.docgen.manpage.ManPageGenerator$SortByShortestOptionNameAlphabetically implements Comparator but not Serializable  At ManPageGenerator.java:[lines 775-785]
+M B RV: picocli.codegen.docgen.manpage.ManPageGenerator$SortByShortestOptionNameAlphabetically.compare(CommandLine$Model$OptionSpec, CommandLine$Model$OptionSpec) negates the return value of String.compareTo(String)  At ManPageGenerator.java:[line 784]
+M P WMI: picocli.codegen.annotation.processing.TypeConverterMetaData.extract(Element) makes inefficient use of keySet iterator instead of entrySet iterator  At TypeConverterMetaData.java:[line 45]
+M C UwF: Field only ever set to null: picocli.codegen.annotation.processing.AbstractCommandSpecProcessor$Context.factory  At AbstractCommandSpecProcessor.java:[line 544]
+H C MF: Field AbstractCommandSpecProcessor.processingEnv masks field in superclass javax.annotation.processing.AbstractProcessor  In AbstractCommandSpecProcessor.java
+SpotBugs ended with exit code 1
+
+> Task :spotbugsMain
+M P WMI: picocli.CommandLine$Model$Interpolator.resolveLookups(String, Set, Map) makes inefficient use of keySet iterator instead of entrySet iterator  At CommandLine.java:[line 12354]
+M B CT: Exception thrown in class picocli.CommandLine$Help$TextTable at new picocli.CommandLine$Help$TextTable(CommandLine$Help$ColorScheme, CommandLine$Help$Column[]) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.  At CommandLine.java:[line 17223]
+M V EI: picocli.CommandLine$Help.commandSpec() may expose internal representation by returning CommandLine$Help.commandSpec  At CommandLine.java:[line 15575]
+M V EI: picocli.CommandLine$AbstractHandler.out() may expose internal representation by returning CommandLine$AbstractHandler.out  At CommandLine.java:[line 1810]
+M V EI: picocli.CommandLine$AbstractHandler.err() may expose internal representation by returning CommandLine$AbstractHandler.err  At CommandLine.java:[line 1814]
+M V EI: picocli.CommandLine.getCommandSpec() may expose internal representation by returning CommandLine.commandSpec  At CommandLine.java:[line 266]
+M V MS: Public static picocli.CommandLine.tracer() may expose internal representation by returning CommandLine.TRACER  At CommandLine.java:[line 18479]
+M V EI: picocli.CommandLine.getErr() may expose internal representation by returning CommandLine.err  At CommandLine.java:[line 1311]
+M V EI: picocli.CommandLine.getOut() may expose internal representation by returning CommandLine.out  At CommandLine.java:[line 1284]
+M B ES: Comparison of String parameter using == or != in picocli.CommandLine.smartUnquote(String)  At CommandLine.java:[line 15036]
+M P SBSC: picocli.CommandLine.createMissingParameterMessage(CommandLine$Model$ArgSpec, CommandLine$Range, List, Stack, int) concatenates strings using + in a loop  At CommandLine.java:[line 15009]
+M P WMI: picocli.CommandLine.getMixins() makes inefficient use of keySet iterator instead of entrySet iterator  At CommandLine.java:[line 291]
+M V EI: picocli.CommandLine$Model$Messages.resourceBundle() may expose internal representation by returning CommandLine$Model$Messages.rb  At CommandLine.java:[line 11764]
+M V EI2: new picocli.CommandLine$Model$Messages(CommandLine$Model$CommandSpec, String, ResourceBundle) may expose internal representation by storing an externally mutable object into CommandLine$Model$Messages.rb  At CommandLine.java:[line 11630]
+M V EI: picocli.CommandLine$Model$Messages.commandSpec() may expose internal representation by returning CommandLine$Model$Messages.spec  At CommandLine.java:[line 11766]
+M V EI: picocli.CommandLine$Model$ArgSpec.group() may expose internal representation by returning CommandLine$Model$ArgSpec.group  At CommandLine.java:[line 9236]
+M V EI: picocli.CommandLine$Model$ArgSpec.root() may expose internal representation by returning CommandLine$Model$ArgSpec.root  At CommandLine.java:[line 9050]
+M V EI: picocli.CommandLine$Model$ArgSpec.setter() may expose internal representation by returning CommandLine$Model$ArgSpec.setter  At CommandLine.java:[line 9178]
+M V EI: picocli.CommandLine$Model$ArgSpec.command() may expose internal representation by returning CommandLine$Model$ArgSpec.commandSpec  At CommandLine.java:[line 9244]
+M B CT: Exception thrown in class picocli.CommandLine$Model$ArgSpec at new picocli.CommandLine$Model$ArgSpec(CommandLine$Model$ArgSpec$Builder) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.  At CommandLine.java:[line 8868]
+M P SBSC: picocli.CommandLine$Model$UsageMessageSpec$1.run() concatenates strings using + in a loop  At CommandLine.java:[line 7924]
+H I Dm: Found reliance on default encoding in picocli.CommandLine$Model$UsageMessageSpec$1.run(): new java.io.InputStreamReader(InputStream)  At CommandLine.java:[line 7920]
+M V EI: picocli.CommandLine$Model$UsageMessageSpec.exitCodeList() may expose internal representation by returning CommandLine$Model$UsageMessageSpec.exitCodeList  At CommandLine.java:[line 8233]
+M V EI: picocli.CommandLine$Model$UsageMessageSpec.sectionKeys() may expose internal representation by returning CommandLine$Model$UsageMessageSpec.sectionKeys  At CommandLine.java:[line 8071]
+M V EI: picocli.CommandLine$Model$UsageMessageSpec.sectionMap() may expose internal representation by returning CommandLine$Model$UsageMessageSpec.helpSectionRendererMap  At CommandLine.java:[line 8088]
+M V EI: picocli.CommandLine$Model$CommandSpec.parent() may expose internal representation by returning CommandLine$Model$CommandSpec.parent  At CommandLine.java:[line 6749]
+M V EI2: picocli.CommandLine$Model$CommandSpec.parent(CommandLine$Model$CommandSpec) may expose internal representation by storing an externally mutable object into CommandLine$Model$CommandSpec.parent  At CommandLine.java:[line 6758]
+M V EI: picocli.CommandLine$Model$CommandSpec.commandLine() may expose internal representation by returning CommandLine$Model$CommandSpec.commandLine  At CommandLine.java:[line 6440]
+M B CT: Exception thrown in class picocli.CommandLine$Model$TypedMember at new picocli.CommandLine$Model$TypedMember(Field, CommandLine$Model$IScope) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.  At CommandLine.java:[line 11413]
+M B CT: Exception thrown in class picocli.CommandLine$Model$TypedMember at new picocli.CommandLine$Model$TypedMember(Method, CommandLine$Model$IScope, CommandLine$Model$CommandSpec) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.  At CommandLine.java:[line 11436]
+M V EI: picocli.CommandLine$Model$ArgGroupSpec.setter() may expose internal representation by returning CommandLine$Model$ArgGroupSpec.setter  At CommandLine.java:[line 10515]
+M V EI: picocli.CommandLine$Model$ArgGroupSpec.parentGroup() may expose internal representation by returning CommandLine$Model$ArgGroupSpec.parentGroup  At CommandLine.java:[line 10485]
+M B CT: Exception thrown in class picocli.CommandLine$Model$ArgGroupSpec at new picocli.CommandLine$Model$ArgGroupSpec(CommandLine$Model$ArgGroupSpec$Builder) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.  At CommandLine.java:[line 10397]
+M V EI: picocli.CommandLine$ParseResult$GroupMatchContainer.group() may expose internal representation by returning CommandLine$ParseResult$GroupMatchContainer.group  At CommandLine.java:[line 12859]
+M P SBSC: picocli.CommandLine$ParseResult$GroupMatchContainer.failGroupMultiplicityExceeded(List, CommandLine) concatenates strings using + in a loop  At CommandLine.java:[line 13088]
+M P WMI: picocli.CommandLine$ParseResult$GroupMatchContainer.failGroupMultiplicityExceeded(List, CommandLine) makes inefficient use of keySet iterator instead of entrySet iterator  At CommandLine.java:[line 13092]
+M P WMI: picocli.CommandLine$ParseResult$GroupMatchContainer.simplifyErrorMessageForSingleGroup(Map, CommandLine) makes inefficient use of keySet iterator instead of entrySet iterator  At CommandLine.java:[line 13105]
+M V EI: picocli.CommandLine$ParseResult.commandSpec() may expose internal representation by returning CommandLine$ParseResult.commandSpec  At CommandLine.java:[line 12547]
+M V EI: picocli.CommandLine$Help$Layout.textTable() may expose internal representation by returning CommandLine$Help$Layout.table  At CommandLine.java:[line 17037]
+M V EI: picocli.CommandLine$ParseResult$GroupMatch.container() may expose internal representation by returning CommandLine$ParseResult$GroupMatch.container  At CommandLine.java:[line 13190]
+M P SBSC: picocli.CommandLine$ParseResult$GroupMatch.validate(CommandLine) concatenates strings using + in a loop  At CommandLine.java:[line 13301]
+M P WMI: picocli.CommandLine$ParseResult$GroupMatch.toString(StringBuilder) makes inefficient use of keySet iterator instead of entrySet iterator  At CommandLine.java:[line 13244]
+M P WMI: picocli.CommandLine$CosineSimilarity.dotProduct(Map, Map) makes inefficient use of keySet iterator instead of entrySet iterator  At CommandLine.java:[line 18517]
+M P SBSC: picocli.CommandLine$UnmatchedArgumentException.quoteElements(List) concatenates strings using + in a loop  At CommandLine.java:[line 18803]
+M B Se: picocli.CommandLine$Help$SortByShortestOptionNameAlphabetically implements Comparator but not Serializable  At CommandLine.java:[lines 17063-17072]
+M B RV: picocli.CommandLine$Help$SortByShortestOptionNameAlphabetically.compare(CommandLine$Model$OptionSpec, CommandLine$Model$OptionSpec) negates the return value of String.compareTo(String)  At CommandLine.java:[line 17071]
+M D REC: Exception is caught when Exception is not thrown in picocli.CommandLine$Help$Ansi.calcIsJansiConsoleInstalled()  At CommandLine.java:[line 17928]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.bash(String, CommandLine)  At AutoComplete.java:[line 524]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.bash(String, CommandLine)  At AutoComplete.java:[line 533]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateEntryPointFunction(String, CommandLine, List)  At AutoComplete.java:[line 606]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateEntryPointFunction(String, CommandLine, List)  At AutoComplete.java:[line 611]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generatedEdgeCaseFunctionCalls(StringBuilder, List)  At AutoComplete.java:[line 620]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateFunctionCallsToArrContains(StringBuilder, List)  At AutoComplete.java:[line 633]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateFunctionCallsToArrContains(StringBuilder, List)  At AutoComplete.java:[line 634]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateFunctionForCommand(String, String, CommandLine)  At AutoComplete.java:[line 713]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateFunctionForCommand(String, String, CommandLine)  At AutoComplete.java:[line 745]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateFunctionForCommand(String, String, CommandLine)  At AutoComplete.java:[line 748]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generatePositionParamCompletionCandidates(StringBuilder, CommandLine$Model$PositionalParamSpec)  At AutoComplete.java:[line 754]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateCompletionCandidates(StringBuilder, CommandLine$Model$OptionSpec)  At AutoComplete.java:[line 761]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generatePositionalParamsCases(List, String, String)  At AutoComplete.java:[line 787]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generatePositionalParamsCases(List, String, String)  At AutoComplete.java:[line 788]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generatePositionalParamsCases(List, String, String)  At AutoComplete.java:[line 790]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generatePositionalParamsCases(List, String, String)  At AutoComplete.java:[line 791]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generatePositionalParamsCases(List, String, String)  At AutoComplete.java:[line 792]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generatePositionalParamsCases(List, String, String)  At AutoComplete.java:[line 793]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generatePositionalParamsCases(List, String, String)  At AutoComplete.java:[line 795]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generatePositionalParamsCases(List, String, String)  At AutoComplete.java:[line 796]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generatePositionalParamsCases(List, String, String)  At AutoComplete.java:[line 797]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generatePositionalParamsCases(List, String, String)  At AutoComplete.java:[line 801]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 830]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 831]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 832]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 833]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 834]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 836]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 837]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 838]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 839]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 840]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 841]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 843]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 844]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 845]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 846]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 847]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 849]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 850]
+M B FS: Format string should use %n rather than \n in picocli.AutoComplete.generateOptionsCases(List, String, String)  At AutoComplete.java:[line 851]
+M X OBL: picocli.AutoComplete.bash(String, File, File, CommandLine) may fail to clean up java.io.Writer on checked exception  Obligation to clean up resource created at AutoComplete.java:[line 495] is not discharged
+H I Dm: Found reliance on default encoding in picocli.AutoComplete.bash(String, File, File, CommandLine): new java.io.FileWriter(File)  At AutoComplete.java:[line 495]
+M V EI: picocli.CommandLine$Model$UnmatchedArgsBinding.setter() may expose internal representation by returning CommandLine$Model$UnmatchedArgsBinding.setter  At CommandLine.java:[line 11046]
+M B CT: Exception thrown in class picocli.CommandLine$Model$UnmatchedArgsBinding at new picocli.CommandLine$Model$UnmatchedArgsBinding(CommandLine$Model$IGetter, CommandLine$Model$ISetter) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.  At CommandLine.java:[line 11032]
+M B Se: picocli.CommandLine$Help$SortByOptionArityAndNameAlphabetically implements Comparator but not Serializable  At CommandLine.java:[lines 17076-17088]
+M V EI: picocli.CommandLine$Model$ArgGroupSpec$Builder.setter() may expose internal representation by returning CommandLine$Model$ArgGroupSpec$Builder.setter  At CommandLine.java:[line 10983]
+M V EI: picocli.CommandLine$Model$ArgGroupSpec$Builder.subgroups() may expose internal representation by returning CommandLine$Model$ArgGroupSpec$Builder.subgroups  At CommandLine.java:[line 11002]
+M V EI: picocli.CommandLine$Model$ArgGroupSpec$Builder.args() may expose internal representation by returning CommandLine$Model$ArgGroupSpec$Builder.args  At CommandLine.java:[line 10996]
+M V EI: picocli.CommandLine$Model$ArgGroupSpec$Builder.specElements() may expose internal representation by returning CommandLine$Model$ArgGroupSpec$Builder.specElements  At CommandLine.java:[line 11010]
+M V EI2: picocli.CommandLine$Model$ArgGroupSpec$Builder.setter(CommandLine$Model$ISetter) may expose internal representation by storing an externally mutable object into CommandLine$Model$ArgGroupSpec$Builder.setter  At CommandLine.java:[line 10985]
+
+> Task :picocli-codegen-tests-java9plus:spotbugsMain
+H I Dm: Found reliance on default encoding in picocli.annotation.processing.tests.Resources.slurp(InputStream): new java.util.Scanner(InputStream)  At Resources.java:[line 34]
+M P SBSC: picocli.annotation.processing.tests.AnnotatedCommandSourceGenerator.printSurroundingElements(PrintWriter, Object, String, Stack, Stack, Set) concatenates strings using + in a loop  At AnnotatedCommandSourceGenerator.java:[line 308]
+M D REC: Exception is caught when Exception is not thrown in picocli.annotation.processing.tests.AnnotatedCommandSourceGenerator.parameterName(Method, int)  At AnnotatedCommandSourceGenerator.java:[line 592]
+M B Eq: picocli.annotation.processing.tests.TypeImporter$TypeName defines compareTo(TypeImporter$TypeName) and uses Object.equals()  At TypeImporter.java:[line 338]
+M B PA: Primitive field picocli.annotation.processing.tests.CommandSpec2YamlProcessor.commands is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.  At CommandSpec2YamlProcessor.java:[line 27]
+M D UrF: Unread public/protected field: picocli.annotation.processing.tests.CommandSpec2YamlProcessor.commands  At CommandSpec2YamlProcessor.java:[line 27]
+M P SIC: Should picocli.annotation.processing.tests.AnnotatedCommandSourceGenerator$App be a _static_ inner class?  At AnnotatedCommandSourceGenerator.java:[line 75]
+M P UuF: Unused field: picocli.annotation.processing.tests.AnnotatedCommandSourceGeneratorProcessor$SourceUnit.packageName  In AnnotatedCommandSourceGeneratorProcessor.java
+M P UuF: Unused field: picocli.annotation.processing.tests.AnnotatedCommandSourceGeneratorProcessor$SourceUnit.className  In AnnotatedCommandSourceGeneratorProcessor.java
+SpotBugs ended with exit code 1
+
+> Task :spotbugsMain
+H B DE: picocli.CommandLine$Model$CommandReflection.extractArgGroupSpec(CommandLine$Model$IAnnotatedElement, CommandLine$IFactory, CommandLine$Model$CommandSpec, boolean) might ignore java.lang.Exception  At CommandLine.java:[line 11774]
+M V EI2: new picocli.CommandLine$PropertiesDefaultProvider(Properties) may expose internal representation by storing an externally mutable object into CommandLine$PropertiesDefaultProvider.properties  At CommandLine.java:[line 18924]
+M V EI: picocli.CommandLine$OverwrittenOptionException.getOverwritten() may expose internal representation by returning CommandLine$OverwrittenOptionException.overwrittenArg  At CommandLine.java:[line 18824]
+M V EI2: new picocli.CommandLine$OverwrittenOptionException(CommandLine, CommandLine$Model$ArgSpec, String) may expose internal representation by storing an externally mutable object into CommandLine$OverwrittenOptionException.overwrittenArg  At CommandLine.java:[line 18820]
+M D REC: Exception is caught when Exception is not thrown in picocli.CommandLine$Interpreter.readPassword(String)  At CommandLine.java:[line 14952]
+H I Dm: Found reliance on default encoding in picocli.CommandLine$Interpreter.expandValidArgumentFile(String, File, List, Set): new java.io.FileReader(File)  At CommandLine.java:[line 13491]
+H I Dm: Found reliance on default encoding in picocli.CommandLine$Interpreter.readUserInputWithEchoing(String): new java.io.InputStreamReader(InputStream)  At CommandLine.java:[line 14958]
+M P UuF: Unused field: picocli.CommandLine$Model$ArgGroupSpec$Builder.topologicalSortDone  In CommandLine.java
+SpotBugs ended with exit code 1
+
+> Task :picocli-shell-jline2:spotbugsMain
+M V EI2: new picocli.shell.jline2.PicocliJLineCompleter(CommandLine$Model$CommandSpec) may expose internal representation by storing an externally mutable object into PicocliJLineCompleter.spec  At PicocliJLineCompleter.java:[line 26]
+M B CT: Exception thrown in class picocli.shell.jline2.PicocliJLineCompleter at new picocli.shell.jline2.PicocliJLineCompleter(CommandLine$Model$CommandSpec) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.  At PicocliJLineCompleter.java:[line 25]
+SpotBugs ended with exit code 1
+
+> Task :picocli-examples:compileKotlin
+w: file:///Users/yoo/experiments/picocli/picocli-examples/src/main/kotlin/picocli/examples/kotlin/globaloptions1105/TopCommand.kt:103:10 Parameter 'args' is never used
+w: file:///Users/yoo/experiments/picocli/picocli-examples/src/main/kotlin/picocli/examples/kotlin/jsr380/beanvalidation/User2.kt:60:10 Parameter 'args' is never used
+
+> Task :picocli-shell-jline3:spotbugsMain
+M V EI: picocli.shell.jline3.PicocliCommands.commandAliases() may expose internal representation by returning PicocliCommands.aliasCommand  At PicocliCommands.java:[line 307]
+M V EI2: new picocli.shell.jline3.PicocliCommands(CommandLine) may expose internal representation by storing an externally mutable object into PicocliCommands.cmd  At PicocliCommands.java:[line 134]
+M V EI: picocli.shell.jline3.PicocliCommands.commandNames() may expose internal representation by returning PicocliCommands.commands  At PicocliCommands.java:[line 302]
+M V EI2: new picocli.shell.jline3.PicocliJLineCompleter(CommandLine$Model$CommandSpec) may expose internal representation by storing an externally mutable object into PicocliJLineCompleter.spec  At PicocliJLineCompleter.java:[line 30]
+M B CT: Exception thrown in class picocli.shell.jline3.PicocliJLineCompleter at new picocli.shell.jline3.PicocliJLineCompleter(CommandLine$Model$CommandSpec) will leave the constructor. The object under construction remains partially initialized and may be vulnerable to Finalizer attacks.  At PicocliJLineCompleter.java:[line 29]
+M V EI2: picocli.shell.jline3.PicocliCommands$PicocliCommandsFactory.setTerminal(Terminal) may expose internal representation by storing an externally mutable object into PicocliCommands$PicocliCommandsFactory.terminal  At PicocliCommands.java:[line 124]
+SpotBugs ended with exit code 1
+
+> Task :picocli-examples:spotbugsMain
+M B SnVI: picocli.examples.UserManualExample$_run_closure1 is Serializable; consider declaring a serialVersionUID  At UserManualExample.groovy:[line 18]
+H I Dm: Found reliance on default encoding in picocli.examples.defaultprovider.MyPropertyDefaultProvider.defaultValue(CommandLine$Model$ArgSpec): new java.io.FileReader(File)  At MyPropertyDefaultProviderDemo.java:[line 47]
+M B SnVI: picocli.examples.checksumscript$_runScriptBody_closure1 is Serializable; consider declaring a serialVersionUID  At checksumscript.groovy:[line 21]
+M B SnVI: picocli.examples.UserManualScriptExample$_runScriptBody_closure1 is Serializable; consider declaring a serialVersionUID  At UserManualScriptExample.groovy:[line 18]
+M B HE: picocli.examples.arggroup.RepeatingCompositeOptions$Document defines equals and uses Object.hashCode()  At RepeatingCompositeOptions.java:[lines 46-48]
+M B Nm: The class name picocli.examples.simple doesn't start with an upper case letter  At simple.groovy:[lines 9-11]
+M B SnVI: picocli.examples.checksum-with-banner$_runScriptBody_closure1 is Serializable; consider declaring a serialVersionUID  At checksum-with-banner.groovy:[line 32]
+M D DLS: Dead store to processed in picocli.examples.execute.ExecutionStrategyWithExecutionResult.main(String[])  At ExecutionStrategyWithExecutionResult.java:[line 63]
+M P SBSC: picocli.examples.kotlin.jsr380.beanvalidation.ValidatingExecutionStrategy.validate(CommandLine$Model$CommandSpec) concatenates strings using + in a loop  At ValidatingExecutionStrategy.kt:[line 23]
+H D NP: value must be non-null but is marked as nullable  At TopCommand.kt:[line 124]
+M V EI: picocli.examples.kotlin.subcommands.SubCmd.getSpec() may expose internal representation by returning SubCmd.spec  At SubCmd.kt:[line 15]
+M V EI2: picocli.examples.kotlin.subcommands.SubCmd.setSpec(CommandLine$Model$CommandSpec) may expose internal representation by storing an externally mutable object into SubCmd.spec  At SubCmd.kt:[line 15]
+M D NP: Possible null pointer dereference in picocli.examples.subcommands.ParentCommandDemo$List.list(File) due to return value of called method  Dereferenced at ParentCommandDemo.java:[line 52]
+M V EI: picocli.examples.logging_mixin_advanced.LoggingMixin.getVerbosity() may expose internal representation by returning LoggingMixin.verbosity  At LoggingMixin.java:[line 87]
+M B SnVI: picocli.examples.Checksum$_call_closure1 is Serializable; consider declaring a serialVersionUID  At checksum.groovy:[lines 23-24]
+M V EI2: new picocli.examples.defaultprovider.PropertiesDefaultProvider(Properties) may expose internal representation by storing an externally mutable object into PropertiesDefaultProvider.properties  At PropertiesDefaultProvider.java:[line 106]
+M B OS: picocli.examples.defaultprovider.PropertiesDefaultProvider.createProperties(File) may fail to close stream  At PropertiesDefaultProvider.java:[line 134]
+M X OBL: picocli.examples.defaultprovider.PropertiesDefaultProvider.createProperties(File) may fail to clean up java.io.Reader  Obligation to clean up resource created at PropertiesDefaultProvider.java:[line 134] is not discharged
+H I Dm: Found reliance on default encoding in picocli.examples.defaultprovider.PropertiesDefaultProvider.createProperties(File): new java.io.FileReader(File)  At PropertiesDefaultProvider.java:[line 134]
+M B Nm: The class name picocli.examples.checksumscript doesn't start with an upper case letter  At checksumscript.groovy:[lines 9-20]
+M D DLS: Dead store to exitCode in picocli.examples.exceptionhandler.ParameterExceptionHandlerDemo.main(String[])  At ParameterExceptionHandlerDemo.java:[line 47]
+H C NP: picocli.examples.kotlin.i18n.localecontrol.LocaleControl.getFile() may return null, but is declared @Nonnull  At LocaleControl.kt:[line 38]
+H C NP: picocli.examples.kotlin.i18n.localecontrol.LocaleControl.getIgnored() may return null, but is declared @Nonnull  At LocaleControl.kt:[line 35]
+M B PA: Primitive field picocli.examples.kotlin.i18n.localecontrol.LocaleControl.ignored is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.  At LocaleControl.kt:[line 35]
+M B PA: Primitive field picocli.examples.kotlin.i18n.localecontrol.LocaleControl.file is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.  At LocaleControl.kt:[line 38]
+M P SBSC: picocli.examples.jsr380.beanvalidation.User.validate() concatenates strings using + in a loop  At User.java:[line 103]
+M B Dm: picocli.examples.i18n.I18NDemo.run() invokes System.exit(...), which shuts down the entire virtual machine  At I18NDemo.java:[line 26]
+M D REC: Exception is caught when Exception is not thrown in picocli.examples.i18n.I18NDemo.run()  At I18NDemo.java:[line 24]
+H I Dm: Found reliance on default encoding in picocli.examples.i18n.I18NDemo.run(): new java.util.Scanner(InputStream)  At I18NDemo.java:[line 22]
+M B Dm: picocli.examples.kotlin.examples.kotlin.i18n.I18NDemo.run() invokes System.exit(...), which shuts down the entire virtual machine  At I18NDemo.kt:[line 31]
+M D REC: Exception is caught when Exception is not thrown in picocli.examples.kotlin.examples.kotlin.i18n.I18NDemo.run()  At I18NDemo.kt:[line 29]
+H I Dm: Found reliance on default encoding in picocli.examples.kotlin.examples.kotlin.i18n.I18NDemo.run(): new java.util.Scanner(InputStream)  At I18NDemo.kt:[line 26]
+M D DLS: Dead store to exitCode in picocli.examples.atfile.AtFileGenerator.test()  At AtFileGenerator.java:[line 137]
+H I Dm: Found reliance on default encoding in picocli.examples.atfile.AtFileGenerator.writeAtFile(List): new java.io.FileWriter(File)  At AtFileGenerator.java:[line 92]
+M V EI2: picocli.examples.kotlin.i18n.localecontrol.InitLocale.setRemainder(List) may expose internal representation by storing an externally mutable object into InitLocale.remainder  At LocaleControl.kt:[line 26]
+M V EI: picocli.examples.kotlin.i18n.localecontrol.InitLocale.getRemainder() may expose internal representation by returning InitLocale.remainder  At LocaleControl.kt:[line 26]
+H C NP: picocli.examples.kotlin.jsr380.beanvalidation.User2.getPreferences() may return null, but is declared @Nonnull  At User2.kt:[line 39]
+H C NP: picocli.examples.kotlin.jsr380.beanvalidation.User2.getSpec() may return null, but is declared @Nonnull  At User2.kt:[line 46]
+M B PA: Primitive field picocli.examples.kotlin.jsr380.beanvalidation.User2.preferences is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.  At User2.kt:[line 39]
+M B PA: Primitive field picocli.examples.kotlin.jsr380.beanvalidation.User2.spec is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.  At User2.kt:[line 46]
+M B Nm: Class picocli.examples.exitcode.ExitCodeOnExecutionException is not derived from an Exception, even though it is named as such  At ExitCodeOnExecutionException.java:[lines 21-31]
+H C NP: picocli.examples.kotlin.globaloptions1105.Base.getArgs() may return null, but is declared @Nonnull  At TopCommand.kt:[line 16]
+M B PA: Primitive field picocli.examples.kotlin.globaloptions1105.Base.args is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.  At TopCommand.kt:[line 16]
+M V EI2: picocli.examples.kotlin.subcommands.TopCmd.setSpec(CommandLine$Model$CommandSpec) may expose internal representation by storing an externally mutable object into TopCmd.spec  At TopCmd.kt:[line 13]
+M V EI: picocli.examples.kotlin.subcommands.TopCmd.getSpec() may expose internal representation by returning TopCmd.spec  At TopCmd.kt:[line 13]
+M B Dm: picocli.examples.typeconverter.InteractiveConverterDemo$InteractiveConverter.convert(String) invokes System.exit(...), which shuts down the entire virtual machine  At InteractiveConverterDemo.java:[line 52]
+H C NP: picocli.examples.kotlin.optional.SingleOptions.getMap() may return null, but is declared @Nonnull  At SingleOptions.kt:[line 21]
+H C NP: picocli.examples.kotlin.optional.SingleOptions.getX() may return null, but is declared @Nonnull  At SingleOptions.kt:[line 9]
+H C NP: picocli.examples.kotlin.optional.SingleOptions.getX() has Optional return type and returns explicit null  At SingleOptions.kt:[line 9]
+M B PA: Primitive field picocli.examples.kotlin.optional.SingleOptions.x is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.  At SingleOptions.kt:[line 9]
+M B PA: Primitive field picocli.examples.kotlin.optional.SingleOptions.map is public and set from inside the class, which makes it too exposed. Consider making it private to limit external accessibility.  At SingleOptions.kt:[line 21]
+M D DLS: Dead store to exitCode in picocli.examples.passthrough.Find.main(String[])  At Find.java:[line 74]
+M D ST: Write to static field picocli.examples.sharedoptions.Top.output from instance method picocli.examples.sharedoptions.Top.verbose(String, Object[])  At Top.java:[line 26]
+M V EI: picocli.examples.Checksum.getFiles() may expose internal representation by returning Checksum.files  In checksum.groovy
+M D DLS: Dead store to exitCode in picocli.examples.exceptionhandler.ExecutionExceptionHandlerDemo.main(String[])  At ExecutionExceptionHandlerDemo.java:[line 34]
+M P SBSC: picocli.examples.jsr380.beanvalidation.ValidatingExecutionStrategy.validate(CommandLine$Model$CommandSpec) concatenates strings using + in a loop  At ValidatingExecutionStrategy.java:[line 26]
+M V EI: picocli.examples.kotlin.interactive.PasswordDemo.getSpec() may expose internal representation by returning PasswordDemo.spec  At PasswordDemo.kt:[line 18]
+M V EI2: picocli.examples.kotlin.interactive.PasswordDemo.setSpec(CommandLine$Model$CommandSpec) may expose internal representation by storing an externally mutable object into PasswordDemo.spec  At PasswordDemo.kt:[line 18]
+M V EI: picocli.examples.kotlin.SubCmdsViaMethods.getSpec() may expose internal representation by returning SubCmdsViaMethods.spec  At SubCmdsViaMethods.kt:[line 13]
+M B OS: picocli.examples.defaultprovider.TwoPass.createExampleProfileFile() may fail to close stream  At TwoPass.java:[line 95]
+M X OBL: picocli.examples.defaultprovider.TwoPass.createExampleProfileFile() may fail to clean up java.io.Writer  Obligation to clean up resource created at TwoPass.java:[line 95] is not discharged
+H I Dm: Found reliance on default encoding in picocli.examples.defaultprovider.TwoPass.createExampleProfileFile(): new java.io.FileWriter(File)  At TwoPass.java:[line 95]
+M B Nm: The class name picocli.examples.checksum-with-banner doesn't start with an upper case letter  At checksum-with-banner.groovy:[lines 24-31]
+M V EI: picocli.examples.kotlin.Checksum.getFiles() may expose internal representation by returning Checksum.files  At Checksum.kt:[line 23]
+M P UrF: Unread field: picocli.examples.arggroup.ArgGroupMixinDemo2$MyMixin.group  At ArgGroupMixinDemo2.java:[line 31]
+M P UrF: Unread field: picocli.examples.git.GitCommit.files  At GitCommit.java:[line 58]
+M P UrF: Unread field: picocli.examples.arggroup.BadGroup.x  At DefaultValueBadExample.java:[line 17]
+M P UrF: Unread field: picocli.examples.Example.helpRequested  At Example.java:[line 32]
+M P UrF: Unread field: picocli.examples.git.GitStatus.mode  At GitStatus.java:[line 25]
+M P UrF: Unread field: picocli.examples.git.GitCommit.message  At GitCommit.java:[line 53]
+SpotBugs ended with exit code 1
