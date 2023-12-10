@@ -6,6 +6,7 @@ buildscript {
     repositories {
         gradlePluginPortal()
         mavenCentral()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
     }
 
     dependencies {
@@ -95,10 +96,20 @@ allprojects {
       ]
       excludeTests = true
     }
+    ext.checkerFrameworkVersion = '3.41.1-SNAPSHOT'
+    dependencies {
+      compileOnly "org.checkerframework:checker-qual:${checkerFrameworkVersion}"
+      testCompileOnly "org.checkerframework:checker-qual:${checkerFrameworkVersion}"
+      checkerFramework "org.checkerframework:checker:${checkerFrameworkVersion}"
+    }
+    configurations.all {
+      resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
 
     repositories {
         maven { url 'https://repo.spring.io/libs-snapshot' }
         mavenCentral()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
     }
 
     configurations.all {

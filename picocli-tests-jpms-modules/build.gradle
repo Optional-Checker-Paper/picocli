@@ -21,6 +21,7 @@ subprojects {
     repositories {
         mavenLocal()
         mavenCentral()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
     }
 
     test {
@@ -41,4 +42,6 @@ subprojects {
 //        testRuntimeOnly    supportDependencies.junit5Engine
 //        testImplementation supportDependencies.systemLambda
     }
+
+    tasks.withType(Javadoc).all { enabled = false }
 }

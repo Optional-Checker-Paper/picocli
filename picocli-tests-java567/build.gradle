@@ -11,6 +11,7 @@ repositories {
     // (BELOW LINES ARE OBSOLETE)
     // do not use mavenCentral(): it uses HTTP in this old version of Gradle
     //maven { url "https://repo.maven.apache.org/maven2/" }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
 }
 
 dependencies {
