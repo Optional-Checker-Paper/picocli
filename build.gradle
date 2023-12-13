@@ -84,6 +84,7 @@ allprojects {
 
      tasks.withType(JavaCompile) {
          options.compilerArgs << "-Xmaxerrs" << "99999"
+         options.compilerArgs << "-Xmaxwarns" << "99999"
      }
 
     compileJava.options.encoding = "UTF-8"
@@ -99,6 +100,7 @@ allprojects {
         '-AassumePure',
         '-AwarnUnneededSuppressions',
         '-AassumeAssertionsAreEnabled',
+        '-AReportChecker_warns',
         "-Astubs=${project.projectDir}/reportoptional.astub",
       ]
       excludeTests = true
