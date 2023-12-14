@@ -1,0 +1,244 @@
+
+> Configure project :
+skipping jacoco test for Java version 11
+
+> Configure project :picocli-spring-boot-starter
+picocli-spring-boot-starter/build.gradle: JavaVersion=11
+picocli-spring-boot-starter/build.gradle: JavaVersion.majorVersion=11
+picocli-spring-boot-starter/build.gradle: useJava17=false
+picocli-spring-boot-starter/build.gradle: api                 org.springframework.boot:spring-boot-starter:2.7.12
+picocli-spring-boot-starter/build.gradle: annotationProcessor org.springframework.boot:spring-boot-configuration-processor:2.7.12
+picocli-spring-boot-starter/build.gradle: testImplementation  org.springframework.boot:spring-boot-starter-test:2.7.12
+
+> Task :createCheckerFrameworkManifest
+> Task :makeModuleInfoDir
+> Task :compileJava
+> Task :processResources NO-SOURCE
+> Task :classes
+> Task :jar
+
+> Task :asciidoctor
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/man/index.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/picocli-2.0-do-more-with-less.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/picocli-programmatic-api.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/migrating-from-commons-cli.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/autocomplete.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/picocli-2.0-groovy-scripts-on-steroids.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/quick-guide.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/groovy-2.5-clibuilder-renewal.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/groovy-2.5-clibuilder-renewal-part2.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/groovy-2.5-clibuilder-renewal-part1.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/build-great-native-cli-apps-in-java-with-graalvm-and-picocli.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/zh/picocli-2.0-do-more-with-less.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/zh/picocli-2.0-groovy-scripts-on-steroids.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/announcing-picocli-1.0.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/picocli-on-graalvm.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/index.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/feedback.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/docs/A-Whirlwind-Tour-of-Picocli.adoc
+
+> Task :javadoc
+> Task :javadocJar
+> Task :sourcesJar
+
+> Task :compileTestJava
+/tmp/experiments/optional-paper-counts-repos/picocli/src/test/java/picocli/TestUtil.java:163: warning: [unchecked] Possible heap pollution from parameterized vararg type T
+    public static <T> Set<T> setOf(T... elements) {
+                                        ^
+  where T is a type-variable:
+    T extends Object declared in method <T>setOf(T...)
+1 warning
+
+> Task :processTestResources
+> Task :testClasses
+> Task :testJar
+> Task :testSourcesJar
+> Task :distTar
+> Task :distZip
+> Task :assemble
+> Task :picocli-codegen:createCheckerFrameworkManifest
+
+> Task :picocli-codegen:compileJava
+/tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/src/main/java/picocli/codegen/aot/graalvm/DynamicProxyConfigGenerator.java:167: warning: [unchecked] Possible heap pollution from parameterized vararg type List<String>
+        private static StringBuilder json(List<String>... stringLists) {
+                                                          ^
+1 warning
+
+> Task :picocli-codegen:processResources
+> Task :picocli-codegen:classes
+> Task :picocli-codegen:jar
+
+> Task :picocli-codegen:generateManpageAsciiDoc
+Generating man pages for [picocli.codegen.docgen.manpage.ManPageGenerator$App, picocli.codegen.aot.graalvm.DynamicProxyConfigGenerator$App, picocli.codegen.aot.graalvm.ReflectionConfigGenerator$App, picocli.codegen.aot.graalvm.ResourceConfigGenerator$App, picocli.AutoComplete$App, picocli.AutoComplete$GenerateCompletion] and all subcommands
+Generating man page /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/gen-manpage.adoc
+Generating man page /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/gen-proxy-config.adoc
+Generating man page /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/gen-reflect-config.adoc
+Generating man page /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/gen-resource-config.adoc
+Generating man page /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/picocli.AutoComplete.adoc
+Generating man page /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/generate-completion.adoc
+
+> Task :picocli-codegen:asciidoctor
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/gen-proxy-config.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/gen-manpage.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/gen-resource-config.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/generate-completion.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/gen-reflect-config.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/picocli.AutoComplete.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/gen-proxy-config.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/gen-manpage.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/gen-resource-config.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/generate-completion.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/gen-reflect-config.adoc
+Converting /tmp/experiments/optional-paper-counts-repos/picocli/picocli-codegen/build/picocli-generated-docs/picocli.AutoComplete.adoc
+
+> Task :picocli-codegen:javadoc
+> Task :picocli-codegen:javadocJar
+> Task :picocli-codegen:sourcesJar
+> Task :picocli-codegen:compileTestJava
+> Task :picocli-codegen:processTestResources
+> Task :picocli-codegen:testClasses
+> Task :picocli-codegen:testJar
+> Task :picocli-codegen:testSourcesJar
+> Task :picocli-codegen:distTar
+> Task :picocli-codegen:distZip
+> Task :picocli-codegen:assemble
+> Task :picocli-codegen-tests-java9plus:createCheckerFrameworkManifest
+> Task :picocli-codegen-tests-java9plus:compileJava
+> Task :picocli-codegen-tests-java9plus:processResources
+> Task :picocli-codegen-tests-java9plus:classes
+> Task :picocli-codegen-tests-java9plus:jar
+> Task :picocli-codegen-tests-java9plus:assemble
+> Task :picocli-groovy:createCheckerFrameworkManifest
+> Task :picocli-groovy:compileJava
+> Task :picocli-groovy:compileGroovy NO-SOURCE
+> Task :picocli-groovy:processResources NO-SOURCE
+> Task :picocli-groovy:classes
+> Task :picocli-groovy:jar
+> Task :picocli-examples:createCheckerFrameworkManifest
+> Task :picocli-examples:generateVersionTxt
+> Task :picocli-examples:processResources NO-SOURCE
+> Task :picocli-groovy:javadoc
+> Task :picocli-groovy:javadocJar
+> Task :picocli-groovy:sourcesJar
+> Task :picocli-groovy:compileTestJava NO-SOURCE
+> Task :picocli-groovy:compileTestGroovy
+> Task :picocli-groovy:processTestResources NO-SOURCE
+> Task :picocli-groovy:testClasses
+> Task :picocli-groovy:testJar
+> Task :picocli-groovy:testSourcesJar
+> Task :picocli-groovy:distTar
+> Task :picocli-groovy:distZip
+> Task :picocli-groovy:assemble
+> Task :picocli-shell-jline2:createCheckerFrameworkManifest
+
+> Task :picocli-examples:compileKotlin
+w: file:///tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/kotlin/picocli/examples/kotlin/globaloptions1105/TopCommand.kt:103:10 Parameter 'args' is never used
+w: file:///tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/kotlin/picocli/examples/kotlin/jsr380/beanvalidation/User2.kt:60:10 Parameter 'args' is never used
+
+> Task :picocli-shell-jline2:compileJava
+
+> Task :picocli-examples:compileJava
+/tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/java/picocli/examples/customhelp/GroupingDemo.java:114: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+        int result = subcommands.values().stream().map(cmd -> cmd.getCommandSpec().names().toString().length() - 2).max(Integer::compareTo).get();
+                                                                                                                                               ^
+/tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/java/picocli/examples/customhelp/GroupingDemo.java:114: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.get() [METHOD]
+        int result = subcommands.values().stream().map(cmd -> cmd.getCommandSpec().names().toString().length() - 2).max(Integer::compareTo).get();
+                                                                                                                                           ^
+/tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/java/picocli/examples/jsr380/beanvalidation/User.java:63: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+    public Optional<@Past LocalDate> getDateOfBirth() {
+                                     ^
+/tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/java/picocli/examples/jsr380/beanvalidation/User.java:63: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+    public Optional<@Past LocalDate> getDateOfBirth() {
+                                     ^
+/tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/java/picocli/examples/jsr380/beanvalidation/User.java:64: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+        return Optional.ofNullable(dateOfBirth);
+                                  ^
+/tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/java/picocli/examples/jsr380/beanvalidation/User.java:64: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+        return Optional.ofNullable(dateOfBirth);
+                                  ^
+/tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/java/picocli/examples/jsr380/beanvalidation/User.java:64: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+        return Optional.ofNullable(dateOfBirth);
+                       ^
+/tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/java/picocli/examples/jsr380/beanvalidation/User2.java:64: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+    public Optional<@Past LocalDate> getDateOfBirth() {
+                                     ^
+/tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/java/picocli/examples/jsr380/beanvalidation/User2.java:64: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+    public Optional<@Past LocalDate> getDateOfBirth() {
+                                     ^
+/tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/java/picocli/examples/jsr380/beanvalidation/User2.java:65: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional [CLASS]
+        return Optional.ofNullable(dateOfBirth);
+                                  ^
+/tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/java/picocli/examples/jsr380/beanvalidation/User2.java:65: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+        return Optional.ofNullable(dateOfBirth);
+                                  ^
+/tmp/experiments/optional-paper-counts-repos/picocli/picocli-examples/src/main/java/picocli/examples/jsr380/beanvalidation/User2.java:65: warning: [usage] Usage of java.util.Optional [CLASS] by java.util.Optional.<T>ofNullable(T) [METHOD]
+        return Optional.ofNullable(dateOfBirth);
+                       ^
+12 warnings
+
+> Task :picocli-examples:compileGroovy
+> Task :picocli-examples:compileScala
+> Task :picocli-examples:classes
+> Task :picocli-examples:jar
+> Task :picocli-examples:assemble
+> Task :picocli-shell-jline2:processResources NO-SOURCE
+> Task :picocli-shell-jline2:classes
+> Task :picocli-shell-jline2:jar
+> Task :picocli-shell-jline2:javadoc
+> Task :picocli-shell-jline2:javadocJar
+> Task :picocli-shell-jline2:sourcesJar
+> Task :picocli-shell-jline2:compileTestJava
+> Task :picocli-shell-jline2:processTestResources NO-SOURCE
+> Task :picocli-shell-jline2:testClasses
+> Task :picocli-shell-jline2:testJar
+> Task :picocli-shell-jline2:testSourcesJar
+> Task :picocli-shell-jline2:distTar
+> Task :picocli-shell-jline2:distZip
+> Task :picocli-shell-jline2:assemble
+> Task :picocli-shell-jline3:createCheckerFrameworkManifest
+> Task :picocli-shell-jline3:compileJava
+> Task :picocli-shell-jline3:processResources NO-SOURCE
+> Task :picocli-shell-jline3:classes
+> Task :picocli-shell-jline3:jar
+> Task :picocli-shell-jline3:javadoc
+> Task :picocli-shell-jline3:javadocJar
+> Task :picocli-shell-jline3:sourcesJar
+> Task :picocli-shell-jline3:compileTestJava
+> Task :picocli-shell-jline3:processTestResources NO-SOURCE
+> Task :picocli-shell-jline3:testClasses
+> Task :picocli-shell-jline3:testJar
+> Task :picocli-shell-jline3:testSourcesJar
+> Task :picocli-shell-jline3:distTar
+> Task :picocli-shell-jline3:distZip
+> Task :picocli-shell-jline3:assemble
+> Task :picocli-spring-boot-starter:createCheckerFrameworkManifest
+> Task :picocli-spring-boot-starter:compileJava
+> Task :picocli-spring-boot-starter:processResources
+> Task :picocli-spring-boot-starter:classes
+> Task :picocli-spring-boot-starter:jar
+> Task :picocli-spring-boot-starter:javadoc
+> Task :picocli-spring-boot-starter:javadocJar
+> Task :picocli-spring-boot-starter:sourcesJar
+> Task :picocli-spring-boot-starter:compileTestJava
+> Task :picocli-spring-boot-starter:processTestResources NO-SOURCE
+> Task :picocli-spring-boot-starter:testClasses
+> Task :picocli-spring-boot-starter:testJar
+> Task :picocli-spring-boot-starter:testSourcesJar
+> Task :picocli-spring-boot-starter:distTar
+> Task :picocli-spring-boot-starter:distZip
+> Task :picocli-spring-boot-starter:assemble
+> Task :picocli-tests-java9plus:createCheckerFrameworkManifest
+> Task :picocli-tests-java9plus:compileJava NO-SOURCE
+> Task :picocli-tests-java9plus:processResources NO-SOURCE
+> Task :picocli-tests-java9plus:classes UP-TO-DATE
+> Task :picocli-tests-java9plus:jar
+> Task :picocli-tests-java9plus:assemble
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 8.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+See https://docs.gradle.org/7.6/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 1m 32s
+87 actionable tasks: 87 executed
