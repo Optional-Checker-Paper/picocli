@@ -207,8 +207,8 @@ M B CT: Exception thrown in class picocli.shell.jline2.PicocliJLineCompleter at 
 SpotBugs ended with exit code 1
 
 > Task :picocli-examples:compileKotlin
-w: file:///Users/yoo/experiments/picocli/picocli-examples/src/main/kotlin/picocli/examples/kotlin/globaloptions1105/TopCommand.kt:103:10 Parameter 'args' is never used
-w: file:///Users/yoo/experiments/picocli/picocli-examples/src/main/kotlin/picocli/examples/kotlin/jsr380/beanvalidation/User2.kt:60:10 Parameter 'args' is never used
+w: file:///experiments/picocli/picocli-examples/src/main/kotlin/picocli/examples/kotlin/globaloptions1105/TopCommand.kt:103:10 Parameter 'args' is never used
+w: file:///experiments/picocli/picocli-examples/src/main/kotlin/picocli/examples/kotlin/jsr380/beanvalidation/User2.kt:60:10 Parameter 'args' is never used
 
 > Task :picocli-shell-jline3:spotbugsMain
 M V EI: picocli.shell.jline3.PicocliCommands.commandAliases() may expose internal representation by returning PicocliCommands.aliasCommand  At PicocliCommands.java:[line 307]
