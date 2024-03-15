@@ -8,10 +8,9 @@ import picocli.CommandLine.Help.TextTable;
 import picocli.CommandLine.Model.CommandSpec;
 import picocli.CommandLine.Model.UsageMessageSpec;
 
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
+import org.checkerframework.checker.nonempty.qual.*;
 
 import static picocli.CommandLine.Model.UsageMessageSpec.SECTION_KEY_COMMAND_LIST;
 import static picocli.CommandLine.Model.UsageMessageSpec.SECTION_KEY_COMMAND_LIST_HEADING;
@@ -110,8 +109,9 @@ class CommandGroupRenderer implements CommandLine.IHelpSectionRenderer {
         return textTable;
     }
 
-    @SuppressWarnings("optional:method.invocation") // non-empty stream : This method is invoked only when subcommands is non-empty (see line 72).
-    private int maxLength(Map<String, CommandLine> subcommands, int max) {
+    // @SuppressWarnings("optional:method.invocation") // non-empty stream : This method is invoked only when subcommands is non-empty (see line 72).
+    private int maxLength(@NonEmpty Map<String, CommandLine> subcommands, int max) {
+        @NonEmpty List<String> foo = List.of();
         int result = subcommands.values().stream().map(cmd -> cmd.getCommandSpec().names().toString().length() - 2).max(Integer::compareTo).get();
         return Math.min(max, result);
     }
