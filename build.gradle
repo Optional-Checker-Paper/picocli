@@ -87,7 +87,9 @@ allprojects {
 
     checkerFramework {
       checkers = [
-        'org.checkerframework.checker.nullness.NullnessChecker',
+         'org.checkerframework.checker.index.IndexChecker',
+         // 'org.checkerframework.checker.nullness.NullnessChecker',
+         // 'org.checkerframework.checker.optional.OptionalChecker',
       ]
       extraJavacArgs = [
         '-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno',
