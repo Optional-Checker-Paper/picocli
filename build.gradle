@@ -88,6 +88,7 @@ allprojects {
     checkerFramework {
       checkers = [
         'org.checkerframework.checker.optional.OptionalChecker',
+        // 'org.checkerframework.checker.optional.RevisedOptionalChecker',
       ]
       extraJavacArgs = [
         '-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno',
@@ -128,8 +129,9 @@ allprojects {
         testImplementation supportDependencies.systemRules
         testImplementation supportDependencies.junitParams
     }
-    tasks.withType(JavaCompile) {
+    tasks.withType(JavaCompile).configureEach {
         options.compilerArgs << '-Xlint:unchecked' << '-Xlint:deprecation'
+        options.forkOptions.jvmArgs +=['-Xmx2500m']
     }
 
     javadoc.destinationDir = file("build/docs/apidocs")
