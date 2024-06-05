@@ -87,8 +87,8 @@ allprojects {
 
     checkerFramework {
       checkers = [
-        'org.checkerframework.checker.optional.OptionalChecker',
-        // 'org.checkerframework.checker.optional.RevisedOptionalChecker',
+//        'org.checkerframework.checker.optional.OptionalChecker',
+         'org.checkerframework.checker.optional.RevisedOptionalChecker',
       ]
       extraJavacArgs = [
         '-AsuppressWarnings=type.anno.before.modifier,type.anno.before.decl.anno',
@@ -129,6 +129,16 @@ allprojects {
         testImplementation supportDependencies.systemRules
         testImplementation supportDependencies.junitParams
     }
+    // To use a locally-built Checker Framework, run gradle with "-PcfLocal".
+    if (project.hasProperty("cfLocal")) {
+        def cfHome = String.valueOf(System.getenv("CHECKERFRAMEWORK"))
+        dependencies {
+            compileOnly files(cfHome + "/checker/dist/checker-qual.jar")
+            testCompileOnly files(cfHome + "/checker/dist/checker-qual.jar")
+            checkerFramework files(cfHome + "/checker/dist/checker.jar")
+        }
+    }
+
     tasks.withType(JavaCompile).configureEach {
         options.compilerArgs << '-Xlint:unchecked' << '-Xlint:deprecation'
         options.forkOptions.jvmArgs +=['-Xmx2500m']

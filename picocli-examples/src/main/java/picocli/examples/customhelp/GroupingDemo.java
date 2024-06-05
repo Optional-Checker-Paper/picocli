@@ -16,6 +16,8 @@ import java.util.Map;
 import static picocli.CommandLine.Model.UsageMessageSpec.SECTION_KEY_COMMAND_LIST;
 import static picocli.CommandLine.Model.UsageMessageSpec.SECTION_KEY_COMMAND_LIST_HEADING;
 
+import org.checkerframework.checker.nonempty.qual.*;
+
 @Command(name = "grouping-demo", mixinStandardHelpOptions = true,
         description = "This shows how to group subcommands with separate headings")
 public class GroupingDemo {
@@ -76,6 +78,7 @@ class CommandGroupRenderer implements CommandLine.IHelpSectionRenderer {
         return result.toString();
     }
 
+    @RequiresNonEmpty("#3.commandSpec().subcommands()")
     private String renderSection(String sectionHeading, List<String> cmdNames, CommandLine.Help help) {
         TextTable textTable = createTextTable(help);
 
@@ -98,11 +101,12 @@ class CommandGroupRenderer implements CommandLine.IHelpSectionRenderer {
         return help.createHeading(sectionHeading) + textTable.toString();
     }
 
+    @RequiresNonEmpty("#1.commandSpec().subcommands()")
     private TextTable createTextTable(CommandLine.Help help) {
         CommandSpec spec = help.commandSpec();
         // prepare layout: two columns
         // the left column overflows, the right column wraps if text is too long
-        int commandLength = maxLength(spec.subcommands(), 37);
+        int commandLength = maxLength(help.commandSpec().subcommands(), 37);
         TextTable textTable = TextTable.forColumns(help.colorScheme(),
                 new Column(commandLength + 2, 2, Column.Overflow.SPAN),
                 new Column(spec.usageMessage().width() - (commandLength + 2), 2, Column.Overflow.WRAP));
@@ -110,8 +114,7 @@ class CommandGroupRenderer implements CommandLine.IHelpSectionRenderer {
         return textTable;
     }
 
-    @SuppressWarnings("optional:method.invocation") // non-empty stream : This method is invoked only when subcommands is non-empty (see line 72).
-    private int maxLength(Map<String, CommandLine> subcommands, int max) {
+    private int maxLength(@NonEmpty Map<String, CommandLine> subcommands, int max) {
         int result = subcommands.values().stream().map(cmd -> cmd.getCommandSpec().names().toString().length() - 2).max(Integer::compareTo).get();
         return Math.min(max, result);
     }
